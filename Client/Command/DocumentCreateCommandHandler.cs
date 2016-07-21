@@ -23,7 +23,7 @@ namespace Client.Command
             {
                 DateTime = command.Date,
                 Status = DocumentStatus.Draft,
-                Id = context.Documents.Count+1,
+                Id = context.Documents.Max(x=>x.Id)+1,
                 Name = command.Name
             });
             context.SaveChanges();
