@@ -40,8 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstraction\QueryExecutor.cs" />
-    <Compile Include="Abstraction\CommandExecutor.cs" />
     <Compile Include="Abstraction\ICommandHandler.cs" />
     <Compile Include="Abstraction\IQueryHandler.cs" />
     <Compile Include="Abstraction\IQuery.cs" />

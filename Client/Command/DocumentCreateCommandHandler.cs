@@ -8,18 +8,16 @@ using Model;
 
 namespace Client.Command
 {
-    public class DocumentCreateCommandHandler : ICommandHandler
+    public class DocumentCreateCommandHandler : ICommandHandler<DocumentCreateCommand>
     {
-        private DocumentCreateCommand command;
         private FakeContext context;
 
-        public DocumentCreateCommandHandler(FakeContext context, DocumentCreateCommand command)
+        public DocumentCreateCommandHandler(FakeContext context)
         {
             this.context = context;
-            this.command = command;
         }
 
-        public void Execute()
+        public void Execute(DocumentCreateCommand command)
         {
             context.Documents.Add(new Document()
             {

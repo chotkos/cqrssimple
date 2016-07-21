@@ -14,9 +14,7 @@ namespace Client
 {
 
     class Program
-    {
-        private static CommandExecutor ce = new CommandExecutor();
-        private static QueryExecutor qe = new QueryExecutor();
+    { 
         private static FakeContext fc = new FakeContext();
         static void Main(string[] args)
         {
@@ -51,9 +49,9 @@ namespace Client
         private static void ListDocuments()
         {
             var q = new ListDocumentsQuery();
-            var handler = new ListDocumentsQueryHandler(fc,q);
+            var handler = new ListDocumentsQueryHandler(fc);
+            var res = handler.Execute(q);
 
-            var res = qe.Execute(handler);
             foreach (var item in res)
             {
                 Console.WriteLine(String.Format("{0}\t{1}\t{2}\t{3}",item.Id,item.Name,item.DateTime,item.Status));
@@ -71,9 +69,8 @@ namespace Client
                 Date = DateTime.Now,
             };
 
-            var handler = new DocumentCreateCommandHandler(fc, com);
-
-            ce.Execute(handler);
+            var handler = new DocumentCreateCommandHandler(fc);
+            handler.Execute(com);
         }
 
         private static void RemoveDocument()
@@ -85,9 +82,8 @@ namespace Client
                 Id = Convert.ToInt32(Console.ReadLine())
             };
 
-            var handler = new DocumentRemoveCommandHandler(fc, com);
-
-            ce.Execute(handler);
+            var handler = new DocumentRemoveCommandHandler(fc);
+            handler.Execute(com);
         }
     }
 }

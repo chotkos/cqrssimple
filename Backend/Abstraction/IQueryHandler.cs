@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace CQRS.Abstraction
 {
 
-    public interface IQueryHandler<TResult>
+    public interface IQueryHandler<TQuery, TResult>
     {
-        TResult Execute();
+        TResult Execute(TQuery query);
     }
 }

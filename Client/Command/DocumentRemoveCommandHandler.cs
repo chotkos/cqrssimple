@@ -8,18 +8,16 @@ using Model;
 
 namespace Client.Command
 {
-    public class DocumentRemoveCommandHandler : ICommandHandler
+    public class DocumentRemoveCommandHandler: ICommandHandler<DocumentRemoveCommand>
     {
-        private DocumentRemoveCommand command;
         private FakeContext context;
 
-        public DocumentRemoveCommandHandler(FakeContext context, DocumentRemoveCommand command)
+        public DocumentRemoveCommandHandler(FakeContext context)
         {
             this.context = context;
-            this.command = command;
         }
 
-        public void Execute()
+        public void Execute(DocumentRemoveCommand command)
         {
             context.Documents.Remove(context.Documents.Single(x => x.Id == command.Id));
             context.SaveChanges();

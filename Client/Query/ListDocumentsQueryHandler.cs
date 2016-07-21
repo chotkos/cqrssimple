@@ -9,19 +9,17 @@ using Model;
 
 namespace Client.Query
 {
-    public class ListDocumentsQueryHandler:IQueryHandler<List<Document>>
+    public class ListDocumentsQueryHandler:IQueryHandler<ListDocumentsQuery,List<Document>>
     {
-        private ListDocumentsQuery query;
         private FakeContext context;
 
-        public ListDocumentsQueryHandler(FakeContext context, ListDocumentsQuery query)
+        public ListDocumentsQueryHandler(FakeContext context)
         {
             this.context = context;
-            this.query = query;
         }
-        
 
-        List<Document> IQueryHandler<List<Document>>.Execute()
+
+        public List<Document> Execute(ListDocumentsQuery query)
         {
             return context.Documents;
         }

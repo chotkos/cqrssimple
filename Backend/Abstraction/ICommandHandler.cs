@@ -7,8 +7,8 @@ using CQRS.Abstraction;
 
 namespace CQRS.Abstraction
 {
-    public interface ICommandHandler
+    public interface ICommandHandler<TCommand>
     {
-        void Execute();
+        void Execute(TCommand command);
     }
 }
