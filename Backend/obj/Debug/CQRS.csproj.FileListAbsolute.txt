@@ -1,0 +1,4 @@
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Backend\bin\Debug\CQRS.dll
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Backend\bin\Debug\CQRS.pdb
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Backend\obj\Debug\CQRS.dll
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Backend\obj\Debug\CQRS.pdb

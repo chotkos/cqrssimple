@@ -1,0 +1,7 @@
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\bin\Debug\Model.dll
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\bin\Debug\Model.pdb
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\obj\Debug\Model.dll
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\obj\Debug\Model.pdb
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\bin\Debug\CQRS.dll
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\bin\Debug\CQRS.pdb
+c:\users\mateusz.chodkowski\documents\visual studio 2015\Projects\CQRSExample\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
